@@ -3,11 +3,11 @@
 function stringToNumber(input) {
   if (typeof input === "string") {
     let number = Number(input);
-    if (number == NaN) {
-      return "Not a Number";
+    if (isNaN(number)) {
+      return "Not a number";
     } else {
       return number;
     }
   }
 }
-console.log(stringToNumber("126"));
+console.log(stringToNumber("abc"));
