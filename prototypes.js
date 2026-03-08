@@ -3,13 +3,21 @@
 // let tomHardware = {};
 // console.log(`computer`, computer.__proto__);
 
-const dog = {
-  barks: true,
-  bring() {
-    return "Dog will bring the stick";
-  },
+// const dog = {
+//   barks: true,
+//   bring() {
+//     return "Dog will bring the stick";
+//   },
+// };
+
+// const cat = Object.create(dog);
+
+// console.log(cat.bring());
+let bike = {
+  cc: 400,
 };
-
-const cat = Object.create(dog);
-
-console.log(cat.bring());
+let ktm = {
+  model: "adv",
+};
+Object.setPrototypeOf(bike, ktm);
+console.log(`ktm `, Object.getPrototypeOf(bike));
