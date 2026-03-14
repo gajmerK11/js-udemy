@@ -1,3 +1,4 @@
+// Inheritance
 class Vehicle {
   constructor(make, model) {
     this.make = make;
