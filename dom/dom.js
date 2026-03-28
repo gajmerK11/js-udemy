@@ -5,6 +5,10 @@ const secondBtn = document.getElementById("highlightFirstCity");
 
 const thirdBtn = document.getElementById("changeOrder");
 
+const fourthBtn = document.getElementById("addNewItem");
+
+const fifthBtn = document.getElementById("removeItem");
+
 const originalText = changedText.textContent;
 
 let flag = true;
@@ -43,4 +47,16 @@ thirdBtn.addEventListener("click", function () {
     order.innerHTML = "Latte";
   }
   flag = !flag;
+});
+
+fourthBtn.addEventListener("click", function () {
+  const newItem = document.getElementById("shoppingList");
+  const newLi = document.createElement("li");
+  newLi.textContent = "Butter";
+  newItem.appendChild(newLi);
+});
+
+fifthBtn.addEventListener("click", function () {
+  const ul = document.getElementById("shoppingList");
+  ul.lastElementChild.remove();
 });
