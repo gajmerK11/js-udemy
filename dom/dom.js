@@ -3,6 +3,8 @@ const btn = document.getElementById("changeTextButton");
 
 const secondBtn = document.getElementById("highlightFirstCity");
 
+const thirdBtn = document.getElementById("changeOrder");
+
 const originalText = changedText.textContent;
 
 let flag = true;
@@ -31,4 +33,14 @@ secondBtn.addEventListener("click", function () {
     `background-color: ${colors[clickCounter]}`;
 
   clickCounter = (clickCounter + 1) % citiesList.length;
+});
+
+thirdBtn.addEventListener("click", function () {
+  const order = document.querySelector("#coffeeOrder > span");
+  if (flag) {
+    order.innerHTML = "Espresso";
+  } else {
+    order.innerHTML = "Latte";
+  }
+  flag = !flag;
 });
