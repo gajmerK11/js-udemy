@@ -66,3 +66,18 @@ document.getElementById("tea").addEventListener("click", function (event) {
     alert("You selected: " + event.target.textContent);
   }
 });
+
+document
+  .getElementById("feedbackForm")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+    const feedbackInput = document.getElementById("feedbackInput");
+    const value = feedbackInput.value;
+    // console.log(value);
+    const textDisplay = document.getElementById("feedbackDisplay");
+    // textDisplay.innerHTML = value;
+    const labelValue = document.querySelector(
+      "#feedbackForm > label",
+    ).innerHTML;
+    textDisplay.innerHTML = `${labelValue} ${value}`;
+  });
