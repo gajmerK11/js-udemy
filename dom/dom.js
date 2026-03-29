@@ -81,3 +81,7 @@ document
     ).innerHTML;
     textDisplay.innerHTML = `${labelValue} ${value}`;
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("domStatus").textContent = "DOM Loaded";
+});
