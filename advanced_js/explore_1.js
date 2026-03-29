@@ -1,14 +1,7 @@
-function sayHello() {
-  console.log("Hello there");
-}
-
-function sayMyName() {
-  console.log("Heisenberg....");
-}
-
-sayHello();
-// sayMyName();
+console.log("first");
 
 setTimeout(() => {
-  sayMyName();
-}, 4000);
+  console.log("second");
+}, 5000);
+
+console.log("third");
