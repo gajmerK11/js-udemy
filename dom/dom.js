@@ -60,3 +60,9 @@ fifthBtn.addEventListener("click", function () {
   const ul = document.getElementById("shoppingList");
   ul.lastElementChild.remove();
 });
+
+document.getElementById("tea").addEventListener("click", function (event) {
+  if (event.target && event.target.matches(".teaType")) {
+    alert("You selected: " + event.target.textContent);
+  }
+});
