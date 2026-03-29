@@ -85,3 +85,7 @@ document
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("domStatus").textContent = "DOM Loaded";
 });
+
+document.getElementById("toggleBtn").addEventListener("click", function () {
+  document.getElementById("togglearea").classList.toggle("highlight");
+});
