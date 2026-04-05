@@ -1,7 +1,7 @@
 function fetchData() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      let success = false;
+      let success = true;
       if (success) {
         resolve("Data fetched successfully");
       } else {
@@ -14,6 +14,10 @@ function fetchData() {
 fetchData()
   .then((data) => {
     console.log(data);
+    return `I have been sent from above`;
+  })
+  .then((value) => {
+    console.log(value);
   })
   .catch((error) => {
     console.error(error);
