@@ -14,7 +14,7 @@ function fetchData() {
 fetchData()
   .then((data) => {
     console.log(data);
-    return `I have been sent from above`;
+    return data.toLowerCase();
   })
   .then((value) => {
     console.log(value);
