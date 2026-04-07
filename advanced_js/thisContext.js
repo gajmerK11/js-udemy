@@ -6,3 +6,9 @@ const person = {
 };
 
 person.greet();
+
+const greetFunction = person;
+greetFunction.greet();
+
+const boundGreet = person.greet.bind();
+boundGreet();
